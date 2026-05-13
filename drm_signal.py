@@ -51,6 +51,7 @@ def send_telegram(msg):
 
 def main():
     try:
+        send_telegram("✅ Bot sinyal DRM berjalan! Test dari GitHub Actions")
         ticker = yf.Ticker(PAIR)
         data = ticker.history(period="5d", interval=INTERVAL)
         if data.empty:
